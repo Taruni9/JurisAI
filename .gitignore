@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual Environment
+venv/
+.env/
+.venv/
+
+# Environment Variables
+.env
+
+# Streamlit Cache
+.streamlit/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Pytest
+.pytest_cache/
+
+# Build files
+build/
+dist/
+*.egg-info/
+
+# FAISS (optional - ignore if regenerated every run)
+*.index
+# Generated Reports
+Legal_Report.pdf
+JurisAI_Report.pdf
+generated_reports/
+
+# Local database and vector store (recreated on first run)
+data/
+chroma_data/

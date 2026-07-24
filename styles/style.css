@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+html,body,[class*="css"]{
+font-family:'Inter',sans-serif;
+background:#FAFAF9;
+color:#1E293B;
+}
+
+#MainMenu,header,footer{
+visibility:hidden;
+}
+
+.block-container{
+padding-top:1.2rem;
+padding-left:2.5rem;
+padding-right:2.5rem;
+padding-bottom:1rem;
+}
+
+section[data-testid="stSidebar"]{
+background:#FFFFFF;
+border-right:1px solid #E5E7EB;
+padding-top:1rem;
+}
+
+section[data-testid="stSidebar"] h1{
+font-size:28px;
+font-weight:700;
+color:#1E293B;
+}
+
+section[data-testid="stSidebar"] p{
+color:#64748B;
+}
+
+.stRadio label{
+font-size:15px;
+font-weight:500;
+color:#475569;
+}
+
+h1{
+font-size:2.6rem;
+font-weight:700;
+letter-spacing:-1px;
+color:#1E293B;
+}
+
+h2{
+font-weight:600;
+color:#334155;
+}
+
+h3{
+font-weight:600;
+color:#475569;
+}
+
+p{
+color:#64748B;
+line-height:1.8;
+}
+
+hr{
+border-color:#E5E7EB;
+}
+
+.stButton button{
+background:#E2E8F0;
+color:#334155;
+border:none;
+border-radius:10px;
+padding:0.55rem 1.3rem;
+font-size:15px;
+font-weight:500;
+min-height:42px;
+transition:all .2s ease;
+box-shadow:0 2px 6px rgba(0,0,0,.04);
+}
+
+.stButton button:hover{
+background:#CBD5E1;
+color:#1E293B;
+transform:translateY(-1px);
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.stButton button:focus{
+outline:none;
+box-shadow:none;
+}
+
+.stTextInput input{
+background:white;
+border:1px solid #E5E7EB;
+border-radius:12px;
+padding:.7rem;
+}
+
+.stTextArea textarea{
+background:white;
+border:1px solid #E5E7EB;
+border-radius:14px;
+}
+
+[data-testid="stFileUploader"]{
+background:white;
+border:1px solid #E5E7EB;
+border-radius:18px;
+padding:1rem;
+}
+
+[data-testid="metric-container"]{
+background:white;
+border:1px solid #E5E7EB;
+border-radius:18px;
+padding:1.2rem;
+box-shadow:0 4px 10px rgba(15,23,42,.03);
+}
+
+details{
+background:white;
+border:1px solid #E5E7EB;
+border-radius:18px;
+padding:.7rem;
+}
+
+.streamlit-expanderHeader{
+font-weight:600;
+color:#334155;
+}
+
+.stSuccess,
+.stInfo,
+.stWarning{
+border-radius:14px;
+}
+
+.js-plotly-plot{
+background:white;
+border-radius:20px;
+}
+
+[data-testid="stTabs"]{
+background:white;
+border-radius:18px;
+}
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#FAFAF9;
+}
+
+::-webkit-scrollbar-thumb{
+background:#D1D5DB;
+border-radius:20px;
+}
