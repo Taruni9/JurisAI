@@ -11,13 +11,19 @@ contracts at once.
 import os
 import uuid
 
+os.environ["ANONYMIZED_TELEMETRY"] = "False"
+
 import chromadb
+from chromadb.config import Settings
 from embeddings.embedding_model import embedding_model
 
 _PERSIST_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "chroma_data")
 os.makedirs(_PERSIST_DIR, exist_ok=True)
 
-_client = chromadb.PersistentClient(path=_PERSIST_DIR)
+_client = chromadb.PersistentClient(
+    path=_PERSIST_DIR,
+    settings=Settings(anonymized_telemetry=False)
+)
 _collection = _client.get_or_create_collection(name="jurisai_documents")
 
 
