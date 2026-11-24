@@ -1,4 +1,10 @@
 import os
+import warnings
+
+# Suppress LangChain deprecation notices for clean terminal logs
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+warnings.filterwarnings("ignore", message=".*LangChainDeprecationWarning.*")
+
 from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_community.chat_models import ChatOpenAI
