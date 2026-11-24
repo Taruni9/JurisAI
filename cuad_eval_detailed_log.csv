@@ -1,0 +1,61 @@
+contract,category,jurisai_prediction,cuad_ground_truth,result,extraction_sec,detection_sec
+"BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT VENTURE AGREEMENT.PDF",Confidentiality Clause,Present,Missing,FP,0.9,18.41
+"BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT VENTURE AGREEMENT.PDF",Termination Clause,Present,Present,TP,0.9,18.41
+"BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT VENTURE AGREEMENT.PDF",Liability Clause,Present,Present,TP,0.9,18.41
+"BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT VENTURE AGREEMENT.PDF",Indemnity Clause,Present,Missing,FP,0.9,18.41
+EhaveInc_20190515_20-F_EX-4.44_11678816_EX-4.44_License Agreement_ Reseller Agreement.pdf,Confidentiality Clause,Present,Missing,FP,3.06,13.29
+EhaveInc_20190515_20-F_EX-4.44_11678816_EX-4.44_License Agreement_ Reseller Agreement.pdf,Termination Clause,Present,Present,TP,3.06,13.29
+EhaveInc_20190515_20-F_EX-4.44_11678816_EX-4.44_License Agreement_ Reseller Agreement.pdf,Liability Clause,Present,Present,TP,3.06,13.29
+EhaveInc_20190515_20-F_EX-4.44_11678816_EX-4.44_License Agreement_ Reseller Agreement.pdf,Indemnity Clause,Present,Missing,FP,3.06,13.29
+FuelcellEnergyInc_20191106_8-K_EX-10.1_11868007_EX-10.1_Development Agreement.pdf,Confidentiality Clause,Present,Missing,FP,4.23,14.98
+FuelcellEnergyInc_20191106_8-K_EX-10.1_11868007_EX-10.1_Development Agreement.pdf,Termination Clause,Present,Present,TP,4.23,14.98
+FuelcellEnergyInc_20191106_8-K_EX-10.1_11868007_EX-10.1_Development Agreement.pdf,Liability Clause,Present,Present,TP,4.23,14.98
+FuelcellEnergyInc_20191106_8-K_EX-10.1_11868007_EX-10.1_Development Agreement.pdf,Indemnity Clause,Missing,Missing,TN,4.23,14.98
+"SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation Agreement of 50MWp Photovoltaic Grid-connected Power Generation Project in Yangqiao of~1.PDF",Confidentiality Clause,Missing,Missing,TN,0.13,27.72
+"SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation Agreement of 50MWp Photovoltaic Grid-connected Power Generation Project in Yangqiao of~1.PDF",Termination Clause,Missing,Present,FN,0.13,27.72
+"SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation Agreement of 50MWp Photovoltaic Grid-connected Power Generation Project in Yangqiao of~1.PDF",Liability Clause,Missing,Present,FN,0.13,27.72
+"SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation Agreement of 50MWp Photovoltaic Grid-connected Power Generation Project in Yangqiao of~1.PDF",Indemnity Clause,Missing,Missing,TN,0.13,27.72
+XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.pdf,Confidentiality Clause,Missing,Missing,TN,0.59,14.9
+XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.pdf,Termination Clause,Present,Present,TP,0.59,14.9
+XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.pdf,Liability Clause,Missing,Present,FN,0.59,14.9
+XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.pdf,Indemnity Clause,Present,Missing,FP,0.59,14.9
+NlsPharmaceuticsLtd_20200228_F-1_EX-10.14_12029046_EX-10.14_Development Agreement.pdf,Confidentiality Clause,Present,Missing,FP,2.84,17.27
+NlsPharmaceuticsLtd_20200228_F-1_EX-10.14_12029046_EX-10.14_Development Agreement.pdf,Termination Clause,Present,Present,TP,2.84,17.27
+NlsPharmaceuticsLtd_20200228_F-1_EX-10.14_12029046_EX-10.14_Development Agreement.pdf,Liability Clause,Present,Present,TP,2.84,17.27
+NlsPharmaceuticsLtd_20200228_F-1_EX-10.14_12029046_EX-10.14_Development Agreement.pdf,Indemnity Clause,Present,Missing,FP,2.84,17.27
+AimmuneTherapeuticsInc_20200205_8-K_EX-10.3_11967170_EX-10.3_Development Agreement.pdf,Confidentiality Clause,Present,Missing,FP,6.37,22.12
+AimmuneTherapeuticsInc_20200205_8-K_EX-10.3_11967170_EX-10.3_Development Agreement.pdf,Termination Clause,Present,Present,TP,6.37,22.12
+AimmuneTherapeuticsInc_20200205_8-K_EX-10.3_11967170_EX-10.3_Development Agreement.pdf,Liability Clause,Present,Present,TP,6.37,22.12
+AimmuneTherapeuticsInc_20200205_8-K_EX-10.3_11967170_EX-10.3_Development Agreement.pdf,Indemnity Clause,Present,Missing,FP,6.37,22.12
+WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.pdf,Confidentiality Clause,Missing,Missing,TN,3.34,14.88
+WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.pdf,Termination Clause,Present,Present,TP,3.34,14.88
+WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.pdf,Liability Clause,Present,Present,TP,3.34,14.88
+WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.pdf,Indemnity Clause,Present,Missing,FP,3.34,14.88
+"MEETGROUP,INC_06_29_2017-EX-10.1-COOPERATION AGREEMENT.PDF",Confidentiality Clause,Present,Missing,FP,2.29,16.56
+"MEETGROUP,INC_06_29_2017-EX-10.1-COOPERATION AGREEMENT.PDF",Termination Clause,Present,Present,TP,2.29,16.56
+"MEETGROUP,INC_06_29_2017-EX-10.1-COOPERATION AGREEMENT.PDF",Liability Clause,Missing,Present,FN,2.29,16.56
+"MEETGROUP,INC_06_29_2017-EX-10.1-COOPERATION AGREEMENT.PDF",Indemnity Clause,Missing,Missing,TN,2.29,16.56
+DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion Agreement.pdf,Confidentiality Clause,Present,Missing,FP,6.45,12.28
+DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion Agreement.pdf,Termination Clause,Present,Present,TP,6.45,12.28
+DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion Agreement.pdf,Liability Clause,Present,Present,TP,6.45,12.28
+DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion Agreement.pdf,Indemnity Clause,Present,Missing,FP,6.45,12.28
+ENTRUSTINC_07_24_1998-EX-10.5-STRATEGIC ALLIANCE AGREEMENT.PDF,Confidentiality Clause,Present,Missing,FP,1.9,19.23
+ENTRUSTINC_07_24_1998-EX-10.5-STRATEGIC ALLIANCE AGREEMENT.PDF,Termination Clause,Present,Present,TP,1.9,19.23
+ENTRUSTINC_07_24_1998-EX-10.5-STRATEGIC ALLIANCE AGREEMENT.PDF,Liability Clause,Present,Present,TP,1.9,19.23
+ENTRUSTINC_07_24_1998-EX-10.5-STRATEGIC ALLIANCE AGREEMENT.PDF,Indemnity Clause,Missing,Missing,TN,1.9,19.23
+STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION AND MAINTENANCE AGREEMENT.PDF,Confidentiality Clause,Present,Missing,FP,4.21,12.05
+STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION AND MAINTENANCE AGREEMENT.PDF,Termination Clause,Present,Present,TP,4.21,12.05
+STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION AND MAINTENANCE AGREEMENT.PDF,Liability Clause,Present,Present,TP,4.21,12.05
+STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION AND MAINTENANCE AGREEMENT.PDF,Indemnity Clause,Present,Missing,FP,4.21,12.05
+QBIOMEDINC_04_08_2020-EX-99.1-JOINT FILING AGREEMENT.PDF,Confidentiality Clause,Missing,Missing,TN,0.16,11.13
+QBIOMEDINC_04_08_2020-EX-99.1-JOINT FILING AGREEMENT.PDF,Termination Clause,Missing,Present,FN,0.16,11.13
+QBIOMEDINC_04_08_2020-EX-99.1-JOINT FILING AGREEMENT.PDF,Liability Clause,Present,Present,TP,0.16,11.13
+QBIOMEDINC_04_08_2020-EX-99.1-JOINT FILING AGREEMENT.PDF,Indemnity Clause,Missing,Missing,TN,0.16,11.13
+TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing Agreement_ Reseller Agreement.pdf,Confidentiality Clause,Present,Missing,FP,1.36,11.07
+TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing Agreement_ Reseller Agreement.pdf,Termination Clause,Present,Present,TP,1.36,11.07
+TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing Agreement_ Reseller Agreement.pdf,Liability Clause,Present,Present,TP,1.36,11.07
+TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing Agreement_ Reseller Agreement.pdf,Indemnity Clause,Present,Missing,FP,1.36,11.07
+KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.PDF,Confidentiality Clause,Present,Missing,FP,6.15,14.65
+KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.PDF,Termination Clause,Present,Present,TP,6.15,14.65
+KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.PDF,Liability Clause,Present,Present,TP,6.15,14.65
+KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.PDF,Indemnity Clause,Present,Missing,FP,6.15,14.65

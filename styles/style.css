@@ -6,8 +6,12 @@ background:#FAFAF9;
 color:#1E293B;
 }
 
-#MainMenu,header,footer{
+#MainMenu,footer{
 visibility:hidden;
+}
+
+header[data-testid="stHeader"]{
+background:transparent;
 }
 
 .block-container{

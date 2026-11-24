@@ -1,19 +1,14 @@
 import os
 from dotenv import load_dotenv
-from langchain_google_genai import ChatGoogleGenerativeAI
+from backend.gemini_helper import get_active_model, invoke_llm
 
 load_dotenv()
 
-print("Loaded key:", os.getenv("GOOGLE_API_KEY"))
-
-llm = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash",
-    temperature=0
-)
+print("Loaded key prefix:", (os.getenv("GOOGLE_API_KEY") or "")[:10] + "...")
+print("Active Model:", get_active_model())
 
 try:
-    response = llm.invoke("Say hello")
-    print(response.content)
-
+    response_text = invoke_llm("Say hello and confirm you are ready.")
+    print("Response:\n", response_text)
 except Exception as e:
-    print(e)
+    print("Error:", e)

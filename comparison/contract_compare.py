@@ -1,4 +1,4 @@
-from backend.gemini_helper import llm
+from backend.gemini_helper import invoke_llm
 
 
 def compare_contracts(contract1, contract2):
@@ -17,5 +17,4 @@ Contract 2:
 List the major differences.
 """
 
-    response = llm.invoke(prompt)
-    return response.content
+    return invoke_llm(prompt)

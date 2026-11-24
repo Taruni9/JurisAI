@@ -1,11 +1,17 @@
+import os
 import uuid
-
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
-
 from auth.auth_manager import ensure_default_admin, list_users, register_user, verify_login
-from backend.gemini_helper import explain_contract
+from backend.gemini_helper import (
+    explain_contract,
+    get_active_model,
+    get_active_provider,
+    get_available_models,
+    get_available_providers,
+    set_active_model,
+)
 from comparison.contract_compare import compare_contracts
 from document_processing.file_extractor import SUPPORTED_EXTENSIONS, extract_structured
 from rag.chunker import chunk_structured_document
@@ -32,7 +38,8 @@ from vector_store.chroma_store import add_documents, delete_document
 st.set_page_config(
     page_title="JurisAI",
     page_icon="⚖️",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 
 
@@ -73,6 +80,8 @@ _defaults = {
     "comparison_text2": "",
     "comparison_filename1": "",
     "comparison_filename2": "",
+    "selected_model": get_active_model(),
+    "selected_provider": get_active_provider(),
 }
 
 for key, value in _defaults.items():
@@ -162,6 +171,72 @@ page = st.sidebar.radio(
     "Workspace",
     nav_options
 )
+
+st.sidebar.divider()
+st.sidebar.markdown("### 🤖 Free AI Engine")
+providers = get_available_providers()
+provider_keys = list(providers.keys())
+
+active_p = st.session_state.get("selected_provider", get_active_provider())
+p_idx = provider_keys.index(active_p) if active_p in provider_keys else 0
+
+selected_provider = st.sidebar.selectbox(
+    "Provider",
+    options=provider_keys,
+    format_func=lambda k: providers[k]["name"],
+    index=p_idx,
+    help="Select the AI provider. All options support 100% free tiers for students!"
+)
+
+provider_meta = providers[selected_provider]
+
+custom_key = None
+if provider_meta.get("key_env"):
+    env_key = os.getenv(provider_meta["key_env"])
+    if not env_key:
+        st.sidebar.warning(f"Key needed: {provider_meta['key_env']}")
+        st.sidebar.caption(provider_meta["key_hint"])
+        custom_key = st.sidebar.text_input(
+            f"Enter {selected_provider.upper()} Key",
+            type="password",
+            key=f"api_key_input_{selected_provider}"
+        )
+    else:
+        st.sidebar.caption(f"✓ {provider_meta['key_env']} active from .env")
+        custom_key = env_key
+
+available_models = get_available_models(selected_provider, api_key=custom_key)
+model_keys = list(available_models.keys())
+
+# Default to the first priority model if current model is not for this provider
+active_m = st.session_state.get(f"model_choice_{selected_provider}", model_keys[0] if model_keys else "")
+if active_m not in model_keys:
+    active_m = model_keys[0] if model_keys else ""
+m_idx = model_keys.index(active_m) if active_m in model_keys else 0
+
+selected_model = st.sidebar.selectbox(
+    "Model",
+    options=model_keys,
+    format_func=lambda k: available_models.get(k, k),
+    index=m_idx,
+    key=f"sb_model_{selected_provider}",
+    help="Select the free model for contract review, risk analysis, and Q&A."
+)
+
+st.session_state[f"model_choice_{selected_provider}"] = selected_model
+st.session_state.selected_model = selected_model
+
+if (selected_provider != get_active_provider() or selected_model != get_active_model()) or custom_key:
+    try:
+        ok, msg = set_active_model(selected_model, provider=selected_provider, custom_key=custom_key)
+        if ok:
+            st.session_state.selected_provider = selected_provider
+            st.session_state.selected_model = selected_model
+            st.sidebar.caption(f"✓ Active: {selected_model}")
+        else:
+            st.sidebar.error(msg)
+    except Exception as e:
+        st.sidebar.error(f"Setup error: {e}")
 
 
 # ---------------- HOME PAGE ----------------

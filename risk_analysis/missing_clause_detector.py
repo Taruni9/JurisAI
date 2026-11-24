@@ -1,7 +1,7 @@
 import json
 import re
 
-from backend.gemini_helper import llm
+from backend.gemini_helper import invoke_llm
 
 CLAUSES = [
     "Confidentiality Clause",
@@ -15,7 +15,18 @@ CLAUSES = [
 
 def _extract_json(raw_text):
     """Pull a JSON array out of a model response, tolerating stray text/fences."""
-    match = re.search(r"\[.*\]", raw_text, re.DOTALL)
+    if not isinstance(raw_text, str):
+        raw_text = str(raw_text)
+    cleaned = raw_text.strip()
+    if cleaned.startswith("```json"):
+        cleaned = cleaned[7:]
+    elif cleaned.startswith("```"):
+        cleaned = cleaned[3:]
+    if cleaned.endswith("```"):
+        cleaned = cleaned[:-3]
+    cleaned = cleaned.strip()
+
+    match = re.search(r"\[.*\]", cleaned, re.DOTALL)
     if not match:
         raise ValueError("No JSON array found in model response.")
     return json.loads(match.group(0))
@@ -62,8 +73,7 @@ Contract:
 """
 
     try:
-        response = llm.invoke(prompt)
-        raw = response.content
+        raw = invoke_llm(prompt)
     except Exception as e:
         return {
             "clauses": [],

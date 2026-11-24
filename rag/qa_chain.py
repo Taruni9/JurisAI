@@ -1,4 +1,4 @@
-from backend.gemini_helper import llm
+from backend.gemini_helper import invoke_llm
 from vector_store.chroma_store import retrieve_documents
 
 
@@ -47,8 +47,7 @@ Provide a clear, direct answer.
 """
 
     try:
-        response = llm.invoke(prompt)
-        answer_text = response.content
+        answer_text = invoke_llm(prompt)
     except Exception as e:
         return {
             "answer": f"""

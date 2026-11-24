@@ -194,10 +194,14 @@ Install the [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki) insta
 
 ## Environment Variables
 
-Create a `.env` file in the project root and add your Google Gemini API key.
+Create a `.env` file in the project root and add your API keys:
 
 ```env
-GOOGLE_API_KEY=your_api_key_here
+# Required for Google Gemini (Free tier from https://aistudio.google.com)
+GOOGLE_API_KEY=your_gemini_api_key_here
+
+# Optional: For high-speed open models on Groq (Free key from https://console.groq.com)
+GROQ_API_KEY=your_groq_api_key_here
 ```
 
 > **Important:** Never commit your `.env` file or API keys to GitHub.

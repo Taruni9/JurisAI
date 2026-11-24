@@ -65,8 +65,11 @@ def _ocr_pdf(file_bytes):
 
     try:
         images = convert_from_path(tmp_path)
+    except Exception:
+        return []
     finally:
-        os.remove(tmp_path)
+        if os.path.exists(tmp_path):
+            os.remove(tmp_path)
 
     pages = []
     for i, image in enumerate(images):
