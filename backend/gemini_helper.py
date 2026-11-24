@@ -61,12 +61,14 @@ def _create_llm(provider, model_name, custom_key=None):
         key = custom_key or os.getenv("GROQ_API_KEY")
         if not key:
             raise ValueError("GROQ_API_KEY is not set. Please add it to your .env file or enter it in the sidebar.")
-        return ChatOpenAI(
-            openai_api_key=key,
-            openai_api_base="https://api.groq.com/openai/v1",
-            model_name=model_name,
-            temperature=0,
-        )
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            return ChatOpenAI(
+                openai_api_key=key,
+                openai_api_base="https://api.groq.com/openai/v1",
+                model_name=model_name,
+                temperature=0,
+            )
     else:
         raise ValueError(f"Unknown provider: {provider}")
 

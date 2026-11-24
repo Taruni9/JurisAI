@@ -12,7 +12,8 @@ venv/
 .env
 
 # Streamlit Cache
-.streamlit/
+.streamlit/*
+!.streamlit/config.toml
 
 # VS Code
 .vscode/
